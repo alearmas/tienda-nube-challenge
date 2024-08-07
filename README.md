@@ -37,6 +37,22 @@ This project is a microservice for managing pricing plans for a fictional servic
 ```bash
 git clone https://github.com/alearmas/tienda-nube-challenge.git
 cd tienda-nube-challenge
+```
+
+### Configure MongoDB
+
+Make sure MongoDB is installed and running on your machine. The application is configured to connect to MongoDB running on `localhost` at the default port `27017.
+
+If MongoDB is running on a different host or port, update the `src/main/resources/application.properties` file with the correct connection details:
+
+```bash
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=tienda_nube
+```
+
+### Build project
+```bash
 mvn clean install
 mvn spring-boot:run
 ```
