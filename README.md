@@ -43,29 +43,14 @@ mvn spring-boot:run
 
 The application will start on http://localhost:8080.
 
-## Usages
+## Usage
 
-### Create Contacts Pricing
-```bash
-curl -X POST http://localhost:8080/api/v1/pricing/contacts/create \
--H "Content-Type: application/json" \
--d '{
-"contactsAvailable": 10000,
-"price": 100.00
-}'
-```
+### API endpoints
 
-### Create Email Pricing
-```bash
-curl -X POST http://localhost:8080/api/v1/pricing/email/create \
--H "Content-Type: application/json" \
--d '{
-"emailsAvailable": 120000,
-"price": 200.00
-}'
-```
+    Create Contacts Pricing: POST /api/v1/pricing/contacts/create
+    Create Emails Pricing: POST /api/v1/pricing/emails/create
+    List Contacts Pricings: GET /api/v1/pricing/contacts/list
+    List Emails Pricings: GET /api/v1/pricing/emails/list
 
-### List Pricings
-```bash
-curl -X GET http://localhost:8080/api/v1/pricing/list
-```
+
+For detailed information on the API endpoints and their usage, refer to the challenge instructions provided [here](https://coda.io/d/Desafio-Tecnico-Backend_dk8MpPF3fJa/Desafio-Tecnico-Backend_suxBh?searchClick=df9faa06-486c-46f4-9415-4524b4356914_k8MpPF3fJa#_lucoX).
