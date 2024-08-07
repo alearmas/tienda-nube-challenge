@@ -6,7 +6,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-@Document(collation = "contacts_pricing")
+@Document(collection = "contacts_pricing")
 public class ContactsPricing {
 
     @Id

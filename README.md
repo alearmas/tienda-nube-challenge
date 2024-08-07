@@ -48,7 +48,7 @@ If MongoDB is running on a different host or port, update the `src/main/resource
 ```bash
 spring.data.mongodb.host=localhost
 spring.data.mongodb.port=27017
-spring.data.mongodb.database=tienda_nube
+spring.data.mongodb.database=base_pricing
 ```
 
 ### Build project
