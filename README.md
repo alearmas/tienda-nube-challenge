@@ -63,10 +63,39 @@ The application will start on http://localhost:8080.
 
 ### API endpoints
 
-    Create Contacts Pricing: POST /api/v1/pricing/contacts/create
-    Create Emails Pricing: POST /api/v1/pricing/emails/create
-    List Contacts Pricings: GET /api/v1/pricing/contacts/list
-    List Emails Pricings: GET /api/v1/pricing/emails/list
+#### Creates contacts pricing:
 
+```bash
+POST
+http://localhost:8080/api/v1/pricing/contacts/create
+BODY:
+{
+    "contactsAvailable": 100000,
+    "emailsAvailable": 0,
+    "price": 150
+}
+```
+
+#### List contacts pricings:
+```bash
+GET
+http://localhost:8080/api/v1/pricing/contacts/list
+```
+
+#### Creates emails pricing:
+```bash
+POST
+http://localhost:8080/api/v1/pricing/emails/create
+BODY:
+{
+    "emailsAvailable": 1000,
+    "price": 150
+}
+```
+#### List emails pricings:
+```bash
+GET
+http://localhost:8080/api/v1/pricing/emails/list
+```
 
 For detailed information on the API endpoints and their usage, refer to the challenge instructions provided [here](https://coda.io/d/Desafio-Tecnico-Backend_dk8MpPF3fJa/Desafio-Tecnico-Backend_suxBh?searchClick=df9faa06-486c-46f4-9415-4524b4356914_k8MpPF3fJa#_lucoX).
