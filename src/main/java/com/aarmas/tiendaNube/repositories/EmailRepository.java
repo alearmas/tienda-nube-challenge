@@ -8,6 +8,6 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface EmailRepository extends MongoRepository<EmailPricing, UUID> {
+public interface EmailRepository extends MongoRepository<EmailPricing, String> {
     Optional<EmailPricing> findByEmailsAvailable(int emailsAvailable);
 }

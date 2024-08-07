@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Repository
-public interface ContactsRepository extends MongoRepository<ContactsPricing, UUID> {
+public interface ContactsRepository extends MongoRepository<ContactsPricing, String> {
     Optional<ContactsPricing> findByContactsAvailable(int contactsAvailable);
     Optional<ContactsPricing> findByEmailsAvailable(int emailsAvailable);
 }

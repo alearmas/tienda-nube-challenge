@@ -1,19 +1,20 @@
 package com.aarmas.tiendaNube.models;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.math.BigDecimal;
-import java.util.UUID;
 
 @Document(collection = "emailPricing")
 public class EmailPricing {
 
     @Id
-    private UUID id;
+    @Indexed(unique=true)
+    private String id;
     private Integer emailsAvailable;
     private BigDecimal price;
-    private final String currencyBase = "USD";
+    private String currencyBase = "USD";
 
     public EmailPricing() {
     }
@@ -23,7 +24,7 @@ public class EmailPricing {
         this.price = price;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
