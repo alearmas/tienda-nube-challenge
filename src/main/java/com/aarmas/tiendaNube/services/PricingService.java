@@ -60,7 +60,7 @@ public class PricingService {
         Optional<EmailPricing> existingEmailsPricing = emailRepository.findByEmailsAvailable(pricing.getEmailsAvailable());
 
         if (existingEmailsPricing.isPresent()) {
-            throw new IllegalArgumentException("A pricing with the same emailsAvailable already exists.");
+            throw new CustomException("A pricing with the same emailsAvailable already exists.");
         }
 
         pricing.setPrice(pricing.getPrice().setScale(2, RoundingMode.HALF_UP));
