@@ -67,7 +67,7 @@ The application will start on http://localhost:8080.
 
 ```bash
 POST
-http://localhost:8080/api/v1/pricing/contacts/create
+http://localhost:8080/api/v1/pricing/contacts
 BODY:
 {
     "contactsAvailable": 100000,
@@ -79,13 +79,13 @@ BODY:
 #### List contacts pricings:
 ```bash
 GET
-http://localhost:8080/api/v1/pricing/contacts/list
+http://localhost:8080/api/v1/pricing/contacts
 ```
 
 #### Creates emails pricing:
 ```bash
 POST
-http://localhost:8080/api/v1/pricing/emails/create
+http://localhost:8080/api/v1/pricing/emails
 BODY:
 {
     "emailsAvailable": 1000,
@@ -95,7 +95,7 @@ BODY:
 #### List emails pricings:
 ```bash
 GET
-http://localhost:8080/api/v1/pricing/emails/list
+http://localhost:8080/api/v1/pricing/emails
 ```
 
 For detailed information on the API endpoints and their usage, refer to the challenge instructions provided [here](https://coda.io/d/Desafio-Tecnico-Backend_dk8MpPF3fJa/Desafio-Tecnico-Backend_suxBh?searchClick=df9faa06-486c-46f4-9415-4524b4356914_k8MpPF3fJa#_lucoX).

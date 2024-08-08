@@ -19,7 +19,7 @@ public class PricingController {
     @Autowired
     private PricingService pricingService;
 
-    @GetMapping("/contacts/list")
+    @GetMapping("/contacts")
     public ResponseEntity<Object> listContacts() {
         try {
             List<ContactsPricing> pricingList = pricingService.getAllContacts();
@@ -32,7 +32,7 @@ public class PricingController {
         }
     }
 
-    @PostMapping("/contacts/create")
+    @PostMapping("/contacts")
     public ResponseEntity<Object> createContact(@RequestBody ContactsPricingDTO pricing) {
         try {
             ContactsPricing createdPricing = pricingService.createPricing(pricing);
@@ -44,7 +44,7 @@ public class PricingController {
         }
     }
 
-    @GetMapping("/emails/list")
+    @GetMapping("/emails")
     public ResponseEntity<Object> listEmail() {
         try {
             List<EmailPricing> pricingList = pricingService.getAllEmail();
@@ -57,7 +57,7 @@ public class PricingController {
         }
     }
 
-    @PostMapping("/emails/create")
+    @PostMapping("/emails")
     public ResponseEntity<Object> createEmail(@RequestBody EmailPricing pricing) {
         try {
             EmailPricing createdPricing = pricingService.createEmailPricing(pricing);
